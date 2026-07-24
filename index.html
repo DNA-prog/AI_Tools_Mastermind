@@ -1,5 +1,3 @@
-# AI_Tools_Mastermind
-Game for DNA 4.0
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +15,6 @@ Game for DNA 4.0
       --shadow: 0 18px 40px rgba(13, 47, 102, 0.12);
       --radius: 22px;
     }
-
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
@@ -30,7 +27,6 @@ Game for DNA 4.0
         linear-gradient(180deg, #f9fbff 0%, var(--bg) 100%);
       overflow: hidden;
     }
-
     .app {
       width: 100%;
       height: 100vh;
@@ -41,7 +37,6 @@ Game for DNA 4.0
       flex-direction: column;
       gap: 12px;
     }
-
     .topbar {
       display: flex;
       align-items: center;
@@ -50,14 +45,12 @@ Game for DNA 4.0
       flex-wrap: wrap;
       flex: none;
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
       min-width: 0;
     }
-
     .brand-badge {
       width: 54px;
       height: 54px;
@@ -71,7 +64,6 @@ Game for DNA 4.0
       box-shadow: var(--shadow);
       flex: none;
     }
-
     .brand h1 {
       margin: 0;
       font-size: clamp(1.05rem, 2vw, 1.7rem);
@@ -83,7 +75,6 @@ Game for DNA 4.0
       color: var(--muted);
       font-size: 0.92rem;
     }
-
     .top-actions {
       display: flex;
       gap: 10px;
@@ -91,7 +82,6 @@ Game for DNA 4.0
       flex-wrap: wrap;
       justify-content: flex-end;
     }
-
     .pill {
       background: rgba(255,255,255,0.84);
       border: 1px solid var(--line);
@@ -106,7 +96,6 @@ Game for DNA 4.0
       backdrop-filter: blur(5px);
       white-space: nowrap;
     }
-
     .hero {
       background: rgba(255,255,255,0.86);
       border: 1px solid rgba(13, 47, 102, 0.12);
@@ -115,7 +104,6 @@ Game for DNA 4.0
       padding: 14px 16px 12px;
       flex: none;
     }
-
     .hero-header {
       display: flex;
       justify-content: space-between;
@@ -124,7 +112,6 @@ Game for DNA 4.0
       flex-wrap: wrap;
       margin-bottom: 12px;
     }
-
     .title-block h2 {
       margin: 0;
       font-size: clamp(1.2rem, 2.6vw, 2.15rem);
@@ -139,14 +126,12 @@ Game for DNA 4.0
       font-size: 0.94rem;
       max-width: 900px;
     }
-
     .scoreboard {
       display: grid;
       grid-template-columns: repeat(3, minmax(120px, 1fr));
       gap: 10px;
       min-width: min(470px, 100%);
     }
-
     .metric {
       background: linear-gradient(180deg, #fff, #f7fbff);
       border: 1px solid var(--line);
@@ -172,8 +157,6 @@ Game for DNA 4.0
       color: var(--navy);
       line-height: 1;
     }
-    .metric.timer-danger .value { color: var(--red); }
-
     .progress-wrap {
       margin-top: 10px;
       background: #edf2fb;
@@ -189,14 +172,12 @@ Game for DNA 4.0
       border-radius: 999px;
       transition: width 0.18s linear;
     }
-
     .main {
       flex: 1;
       min-height: 0;
       display: grid;
       grid-template-columns: 1fr;
     }
-
     .panel {
       border-radius: 26px;
       border: 1px solid rgba(13, 47, 102, 0.12);
@@ -208,7 +189,6 @@ Game for DNA 4.0
       flex-direction: column;
       gap: 12px;
     }
-
     .panel-title {
       display: flex;
       justify-content: space-between;
@@ -225,7 +205,6 @@ Game for DNA 4.0
       font-size: 0.9rem;
       white-space: nowrap;
     }
-
     .game-shell {
       flex: 1;
       min-height: 0;
@@ -233,7 +212,6 @@ Game for DNA 4.0
       grid-template-rows: auto 1.3fr 1.2fr auto;
       gap: 12px;
     }
-
     .game-stage {
       border-radius: 24px;
       border: 1px dashed rgba(13, 47, 102, 0.25);
@@ -245,14 +223,12 @@ Game for DNA 4.0
       align-items: center;
       min-height: 0;
     }
-
     .stage-inner {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 14px;
       align-items: stretch;
     }
-
     .tool-card {
       border-radius: 24px;
       background: linear-gradient(135deg, var(--navy), #1850a5);
@@ -280,7 +256,6 @@ Game for DNA 4.0
       letter-spacing: 0.01em;
       padding: 8px 0;
     }
-
     .countdown-box {
       border-radius: 24px;
       border: 1px solid var(--line);
@@ -311,7 +286,6 @@ Game for DNA 4.0
       line-height: 1.45;
       font-size: 0.88rem;
     }
-
     .answers-wrap {
       border-radius: 24px;
       border: 1px solid var(--line);
@@ -322,14 +296,12 @@ Game for DNA 4.0
       gap: 10px;
       min-height: 0;
     }
-
     .categories {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 12px;
       align-items: stretch;
     }
-
     .cat-btn {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -348,7 +320,7 @@ Game for DNA 4.0
       transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease, background .14s ease;
       position: relative;
       padding-top: 26px;
-      font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
       min-width: 0;
     }
     .cat-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 26px rgba(13, 47, 102, 0.08); }
@@ -377,7 +349,6 @@ Game for DNA 4.0
       background: linear-gradient(180deg, #fff2f2, #fff);
       color: #b11717;
     }
-
     .feedback {
       display: none;
       border-radius: 18px;
@@ -391,7 +362,6 @@ Game for DNA 4.0
     .feedback.show { display: flex; }
     .feedback.ok { background: #ecfff4; border: 1px solid rgba(10,143,73,0.28); color: #0a7139; }
     .feedback.no { background: #fff2f2; border: 1px solid rgba(224,24,24,0.24); color: #b11717; }
-
     .controls {
       display: flex;
       gap: 10px;
@@ -401,7 +371,6 @@ Game for DNA 4.0
       margin-top: 2px;
       flex: none;
     }
-
     .btn {
       border: 0;
       border-radius: 999px;
@@ -413,7 +382,7 @@ Game for DNA 4.0
     .btn:hover { transform: translateY(-1px); }
     .btn.primary { background: linear-gradient(135deg, var(--navy), #1b57af); color: white; box-shadow: 0 12px 24px rgba(16,51,110,0.14); }
     .btn.secondary { background: white; color: var(--navy); border: 1px solid var(--line); }
-
+    
     .start-screen, .end-screen {
       position: fixed;
       inset: 0;
@@ -424,7 +393,6 @@ Game for DNA 4.0
       z-index: 30;
       padding: 16px;
     }
-
     .dialog {
       width: min(920px, 96vw);
       background: white;
@@ -433,7 +401,6 @@ Game for DNA 4.0
       border: 1px solid rgba(16, 51, 110, 0.12);
       overflow: hidden;
     }
-
     .dialog-head {
       background: linear-gradient(135deg, var(--navy), #164a95);
       color: white;
@@ -441,33 +408,98 @@ Game for DNA 4.0
     }
     .dialog-head h2 { margin: 0; font-size: clamp(1.35rem, 3vw, 2.2rem); }
     .dialog-head p { margin: 8px 0 0; color: rgba(255,255,255,0.88); line-height: 1.6; }
-
     .dialog-body {
       padding: 20px 22px 22px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .bullet, .sample {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 12px 14px;
-      background: linear-gradient(180deg, #fff, #f8fbff);
-      color: var(--text);
-      margin-bottom: 10px;
-    }
-    .bullet strong, .sample strong { color: var(--navy); }
-
-    .sample {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
+      flex-direction: column;
+      gap: 16px;
     }
-    .sample small { color: var(--muted); font-weight: 700; }
+
+    /* Start Screen Visual Grid & Options Styles */
+    .visual-banner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .visual-card {
+      background: linear-gradient(135deg, #102347, #1d4b8f);
+      border-radius: 16px;
+      padding: 16px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(13, 47, 102, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .visual-card .icon-graphic {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.12);
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .visual-card span {
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+    .options-title {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--navy);
+      margin-top: 4px;
+      text-align: center;
+    }
+    .mode-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .option-card {
+      border: 2px solid var(--line);
+      border-radius: 20px;
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      background: linear-gradient(180deg, #ffffff, #f7fafe);
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .option-card:hover {
+      border-color: var(--navy);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(13, 47, 102, 0.1);
+    }
+    .option-card h4 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+    .option-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+    .option-card .badge-time {
+      display: inline-block;
+      margin-top: 6px;
+      background: rgba(13, 47, 102, 0.08);
+      color: var(--navy);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.76rem;
+    }
 
     .dialog-footer {
       padding: 0 22px 22px;
@@ -476,7 +508,6 @@ Game for DNA 4.0
       gap: 10px;
       flex-wrap: wrap;
     }
-
     .results-panel {
       display: none;
       border-radius: 22px;
@@ -501,7 +532,6 @@ Game for DNA 4.0
     }
     .results-tile .label { display: block; color: var(--muted); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; }
     .results-tile .value { display: block; color: var(--navy); font-size: 1.35rem; font-weight: 1000; margin-top: 4px; }
-
     .footer-note {
       color: var(--muted);
       font-size: 0.9rem;
@@ -517,13 +547,13 @@ Game for DNA 4.0
       .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stage-inner { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 640px) {
       body { overflow: auto; }
       .app { height: auto; min-height: 100vh; padding: 12px; }
       .hero, .panel { border-radius: 22px; }
       .scoreboard { grid-template-columns: 1fr; }
       .categories { grid-template-columns: 1fr; }
+      .mode-options, .visual-banner { grid-template-columns: 1fr; }
       .results-grid { grid-template-columns: 1fr; }
       .brand { align-items: flex-start; }
       .topbar { align-items: flex-start; }
@@ -536,32 +566,61 @@ Game for DNA 4.0
   </style>
 </head>
 <body>
+  <!-- START SCREEN -->
   <div class="start-screen" id="startScreen">
     <div class="dialog">
       <div class="dialog-head">
         <h2>AI Tools Mastermind</h2>
-        <p>One platform appears at a time. Choose the best-fit category before the next card arrives.</p>
+        <p>Choose a game mode option to test your knowledge with 5 randomly assigned AI tool questions covering different purposes.</p>
       </div>
       <div class="dialog-body">
-        <div>
-          <div class="bullet"><strong>Game style:</strong> Sequential, one-by-one challenge with a short pause between tools.</div>
-          <div class="bullet"><strong>Round length:</strong> 15 tools, with a 10-second decision window per tool.</div>
-          <div class="bullet"><strong>Scoring:</strong> +10 per correct answer, no points for wrong answers, bonus for speed.</div>
+        <!-- Digital AI Visuals Banner -->
+        <div class="visual-banner">
+          <div class="visual-card">
+            <div class="icon-graphic">⚡</div>
+            <span>Neural Engine</span>
+          </div>
+          <div class="visual-card">
+            <div class="icon-graphic">🤖</div>
+            <span>Generative AI</span>
+          </div>
+          <div class="visual-card">
+            <div class="icon-graphic">📊</div>
+            <span>Smart Analytics</span>
+          </div>
         </div>
-        <div>
-          <div class="sample"><span>ChatGPT</span><small>Text Writing</small></div>
-          <div class="sample"><span>DALL·E</span><small>Image Generation</small></div>
-          <div class="sample"><span>Gamma</span><small>PPT Generation</small></div>
-          <div class="sample"><span>Power BI Copilot</span><small>Data Analysis</small></div>
-          <div class="sample"><span>GitHub Copilot</span><small>Coding Assistance</small></div>
+
+        <div class="options-title">Select a Game Challenge Option:</div>
+
+        <!-- 3 Game Mode Options -->
+        <div class="mode-options">
+          <div class="option-card" onclick="selectOption(10, 45)">
+            <div>
+              <h4>Option A: Speed Blitz</h4>
+              <p>5 Random Questions across categories. Quick decisions!</p>
+            </div>
+            <div><span class="badge-time">10s / Tool • 45s Total</span></div>
+          </div>
+          <div class="option-card" onclick="selectOption(15, 60)">
+            <div>
+              <h4>Option B: Standard</h4>
+              <p>5 Random Questions across categories. Balanced pace.</p>
+            </div>
+            <div><span class="badge-time">15s / Tool • 60s Total</span></div>
+          </div>
+          <div class="option-card" onclick="selectOption(20, 90)">
+            <div>
+              <h4>Option C: Precision</h4>
+              <p>5 Random Questions across categories. Relaxed timing.</p>
+            </div>
+            <div><span class="badge-time">20s / Tool • 90s Total</span></div>
+          </div>
         </div>
-      </div>
-      <div class="dialog-footer">
-        <button class="btn primary" id="startBtn">Start Game</button>
       </div>
     </div>
   </div>
 
+  <!-- END SCREEN -->
   <div class="end-screen" id="endScreen" style="display:none;">
     <div class="dialog">
       <div class="dialog-head">
@@ -579,7 +638,7 @@ Game for DNA 4.0
           </div>
         </div>
         <div class="footer-note">
-          Use this game to help participants quickly associate AI tools with the right use cases. It is intentionally simple to operate, which makes it well suited for live event use.
+          Use this game to help participants quickly associate AI tools with the right use cases.
         </div>
       </div>
       <div class="dialog-footer">
@@ -589,6 +648,7 @@ Game for DNA 4.0
     </div>
   </div>
 
+  <!-- MAIN APP -->
   <div class="app" id="appShell">
     <div class="topbar">
       <div class="brand">
@@ -599,34 +659,31 @@ Game for DNA 4.0
         </div>
       </div>
       <div class="top-actions">
-        <div class="pill">⏱️ <span id="timeStat">90s</span></div>
+        <div class="pill">⏱️ <span id="timeStat">60s</span></div>
         <div class="pill">🏆 Score: <span id="scoreStat">0</span></div>
         <div class="pill">🧠 Correct: <span id="correctStat">0</span></div>
       </div>
     </div>
-
     <div class="hero">
       <div class="hero-header">
         <div class="title-block">
           <h2><span class="accent">AI</span> MATCHMAKING CHALLENGE</h2>
-          <p class="subtitle">Click the category that best fits the platform shown in the center. The screen keeps only the live game window visible once you start.</p>
+          <p class="subtitle">Click the category that best fits the platform shown in the center.</p>
         </div>
         <div class="scoreboard">
-          <div class="metric"><span class="label">Current Tool</span><span class="value" id="toolCount">1 / 15</span></div>
-          <div class="metric"><span class="label">Time Left</span><span class="value" id="timeLeft">90</span></div>
+          <div class="metric"><span class="label">Current Tool</span><span class="value" id="toolCount">1 / 5</span></div>
+          <div class="metric"><span class="label">Time Left</span><span class="value" id="timeLeft">60</span></div>
           <div class="metric"><span class="label">Decision Window</span><span class="value" id="decisionTimerTop">10</span></div>
         </div>
       </div>
       <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
     </div>
-
     <div class="main">
       <section class="panel game-shell">
         <div class="panel-title">
           <h3>Live Challenge</h3>
           <span id="questionLabel">Waiting to start</span>
         </div>
-
         <div class="game-stage">
           <div class="stage-inner">
             <div class="tool-card">
@@ -640,7 +697,6 @@ Game for DNA 4.0
             </div>
           </div>
         </div>
-
         <div class="answers-wrap">
           <div class="panel-title" style="margin-bottom: 10px;">
             <h3>Pick the category</h3>
@@ -649,46 +705,56 @@ Game for DNA 4.0
           <div class="categories" id="categories"></div>
           <div class="feedback" id="feedback"></div>
         </div>
-
         <div class="controls">
           <button class="btn secondary" id="skipBtn">Skip</button>
-          <button class="btn primary" id="restartBtnSide">Restart</button>
+          <button class="btn primary" id="restartBtnSide">Restart Game</button>
         </div>
       </section>
     </div>
   </div>
 
   <script>
+    // 5 Categories
     const categories = [
       "Text Writing",
-      "Image Generation",
-      "PPT Generation",
+      "Image / Creative",
+      "PPT / Presentation",
       "Data Analysis",
       "Coding Assistance"
     ];
 
-    const questions = [
-      { tool: "ChatGPT", category: "Text Writing" },
-      { tool: "Claude", category: "Text Writing" },
-      { tool: "Gemini", category: "Text Writing" },
-      { tool: "DALL·E", category: "Image Generation" },
-      { tool: "Midjourney", category: "Image Generation" },
-      { tool: "Adobe Firefly", category: "Image Generation" },
-      { tool: "Gamma", category: "PPT Generation" },
-      { tool: "Beautiful.ai", category: "PPT Generation" },
-      { tool: "Microsoft Copilot for PowerPoint", category: "PPT Generation" },
-      { tool: "Power BI Copilot", category: "Data Analysis" },
-      { tool: "Tableau Pulse", category: "Data Analysis" },
-      { tool: "Julius AI", category: "Data Analysis" },
-      { tool: "GitHub Copilot", category: "Coding Assistance" },
-      { tool: "Replit AI", category: "Coding Assistance" },
-      { tool: "Cursor", category: "Coding Assistance" }
-    ];
+    // The 15 AI Tools organized by Category
+    const questionRepository = {
+      "Text Writing": [
+        { tool: "Jasper", category: "Text Writing" },
+        { tool: "Copy.AI", category: "Text Writing" },
+        { tool: "Writer", category: "Text Writing" }
+      ],
+      "Image / Creative": [
+        { tool: "Midjourney", category: "Image / Creative" },
+        { tool: "Adobe Firefly", category: "Image / Creative" },
+        { tool: "Dall-E", category: "Image / Creative" }
+      ],
+      "PPT / Presentation": [
+        { tool: "Gamma", category: "PPT / Presentation" },
+        { tool: "Beautiful.ai", category: "PPT / Presentation" },
+        { tool: "Tome", category: "PPT / Presentation" }
+      ],
+      "Data Analysis": [
+        { tool: "DataRobot", category: "Data Analysis" },
+        { tool: "Tableau", category: "Data Analysis" },
+        { tool: "ThoughtSpot", category: "Data Analysis" }
+      ],
+      "Coding Assistance": [
+        { tool: "GitHub Copilot", category: "Coding Assistance" },
+        { tool: "Cursor", category: "Coding Assistance" },
+        { tool: "Windsurf", category: "Coding Assistance" }
+      ]
+    };
 
     const els = {
       startScreen: document.getElementById('startScreen'),
       endScreen: document.getElementById('endScreen'),
-      startBtn: document.getElementById('startBtn'),
       restartBtn: document.getElementById('restartBtn'),
       restartBtnSide: document.getElementById('restartBtnSide'),
       reviewBtn: document.getElementById('reviewBtn'),
@@ -709,8 +775,7 @@ Game for DNA 4.0
       finalCorrect: document.getElementById('finalCorrect'),
       finalWrong: document.getElementById('finalWrong'),
       finalAccuracy: document.getElementById('finalAccuracy'),
-      endSub: document.getElementById('endSub'),
-      appShell: document.getElementById('appShell')
+      endSub: document.getElementById('endSub')
     };
 
     let deck = [];
@@ -720,7 +785,7 @@ Game for DNA 4.0
     let wrong = 0;
     let answered = false;
     let active = false;
-    let totalSeconds = 90;
+    let totalSeconds = 60;
     let remaining = totalSeconds;
     let decisionSeconds = 10;
     let decisionTimer = decisionSeconds;
@@ -734,6 +799,17 @@ Game for DNA 4.0
         [copy[i], copy[j]] = [copy[j], copy[i]];
       }
       return copy;
+    }
+
+    // Select 5 questions ensuring 1 question per category purpose
+    function generate5RandomQuestions() {
+      const selected = [];
+      for (const cat in questionRepository) {
+        const catQuestions = questionRepository[cat];
+        const randomQ = catQuestions[Math.floor(Math.random() * catQuestions.length)];
+        selected.push(randomQ);
+      }
+      return shuffle(selected);
     }
 
     function buildCategoryButtons() {
@@ -762,9 +838,9 @@ Game for DNA 4.0
       els.timeStat.textContent = `${remaining}s`;
       els.scoreStat.textContent = score;
       els.correctStat.textContent = correct;
-      els.toolCount.textContent = `${Math.min(current + 1, deck.length || 15)} / 15`;
-      els.questionLabel.textContent = active ? `Question ${Math.min(current + 1, 15)} of 15` : 'Waiting to start';
-      const pct = Math.min((current / 15) * 100, 100);
+      els.toolCount.textContent = `${Math.min(current + 1, 5)} / 5`;
+      els.questionLabel.textContent = active ? `Question ${Math.min(current + 1, 5)} of 5` : 'Waiting to start';
+      const pct = Math.min((current / 5) * 100, 100);
       els.progressBar.style.width = `${pct}%`;
       els.decisionTimerTop.textContent = decisionTimer;
       els.decisionTimerLarge.textContent = decisionTimer;
@@ -781,7 +857,6 @@ Game for DNA 4.0
       decisionTimer = decisionSeconds;
       els.currentTool.textContent = q.tool;
       updateStats();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function tickGlobal() {
@@ -800,8 +875,14 @@ Game for DNA 4.0
       if (decisionTimer <= 0) autoMiss();
     }
 
+    function selectOption(perToolTime, globalTime) {
+      decisionSeconds = perToolTime;
+      totalSeconds = globalTime;
+      startGame();
+    }
+
     function startGame() {
-      deck = shuffle(questions);
+      deck = generate5RandomQuestions();
       current = 0;
       score = 0;
       correct = 0;
@@ -827,10 +908,8 @@ Game for DNA 4.0
       const q = deck[current];
       const buttons = [...document.querySelectorAll('.cat-btn')];
       buttons.forEach(b => b.disabled = true);
-
       const correctBtn = buttons.find(b => b.textContent.includes(q.category));
       const isCorrect = selected === q.category;
-
       if (isCorrect) {
         correct += 1;
         score += 10;
@@ -842,10 +921,8 @@ Game for DNA 4.0
         if (correctBtn) correctBtn.classList.add('correct');
         showFeedback(`Incorrect. ${q.tool} is best matched to ${q.category}.`, false);
       }
-
       current += 1;
       updateStats();
-
       setTimeout(() => {
         if (!active) return;
         if (current >= deck.length) finishGame();
@@ -922,9 +999,19 @@ Game for DNA 4.0
       updateStats();
     }
 
-    els.startBtn.addEventListener('click', startGame);
-    els.restartBtn.addEventListener('click', startGame);
-    els.restartBtnSide.addEventListener('click', startGame);
+    function resetToStartScreen() {
+      active = false;
+      clearInterval(globalTick);
+      clearInterval(toolTick);
+      els.endScreen.style.display = 'none';
+      els.startScreen.style.display = 'grid';
+      els.currentTool.textContent = '—';
+      current = 0;
+      updateStats();
+    }
+
+    els.restartBtn.addEventListener('click', resetToStartScreen);
+    els.restartBtnSide.addEventListener('click', resetToStartScreen);
     els.reviewBtn.addEventListener('click', () => {
       els.endScreen.style.display = 'none';
       document.body.style.overflow = 'hidden';
